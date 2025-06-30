@@ -28,7 +28,7 @@ trusted_clients =
 
 [announcements]
 subscriptions = 
-	mainsail
+	octoeverywhere
 
 [update_manager]
 refresh_interval = 168
@@ -96,4 +96,15 @@ origin = https://github.com/andrewmcgr/klipper_tmc_autotune.git
 managed_services = klipper
 primary_branch = main
 install_script = install.sh
+
+[update_manager octoeverywhere]
+type = git_repo
+channel = beta
+path = /home/mks/octoeverywhere
+origin = https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere.git
+env = /home/mks/octoeverywhere-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	octoeverywhere
 
